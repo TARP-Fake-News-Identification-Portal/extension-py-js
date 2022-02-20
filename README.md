@@ -6,7 +6,7 @@ This extension is created using [Rapydscript](https://openbase.com/js/rapydscrip
 
 1. clone this repo
 2. open Google Chrome
-3. open [extension manager page](chrome://extensions/) present in the [settings page](chrome://settings/)
+3. open extension manager page present in the settings page or type chrome://extensions/ in the address bar
 4. enable developer mode
 5. click on "Load unpacked"
 6. navigate and choose the root folder
