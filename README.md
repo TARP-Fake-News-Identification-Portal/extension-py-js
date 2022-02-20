@@ -4,6 +4,8 @@ This extension is created using [Rapydscript](https://openbase.com/js/rapydscrip
 
 ## **how to use?**
 
+=============
+
 1. clone this repo
 2. open Google Chrome
 3. open extension manager page present in the settings page or type chrome://extensions/ in the address bar
@@ -12,6 +14,8 @@ This extension is created using [Rapydscript](https://openbase.com/js/rapydscrip
 6. navigate and choose the root folder
 
 ## **description of files & folders**
+
+==============================
 
 ### [manifest.json](https://github.com/TARP-Fake-News-Identification-Portal/extension-py-js/blob/main/manifest.json)
 
