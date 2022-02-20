@@ -26,5 +26,5 @@
         "48": "/user-interface/images/get_started48.png",
         "128": "/user-interface/images/get_started128.png"
     },
-    "options_page": "options.html"
+    "options_page": "/user-options/options.html"
 }
