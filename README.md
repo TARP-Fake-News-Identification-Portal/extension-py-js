@@ -1,14 +1,15 @@
 # **extension-py-js**
 
-This extension is created using [Rapydscript](https://openbase.com/js/rapydscript) (_subject to change_)
+This extension is created using [Rapydscript](https://openbase.com/js/rapydscript) (_subject to change_) and implemented on [Google Chrome](https://www.google.com/chrome/).
 
 ## **how to use?**
 
 1. clone this repo
-2. open extension manager page on chrome
-3. enable developer mode
-4. click on "Load unpacked"
-5. navigate and choose the root folder
+2. open Google Chrome
+3. open [extension manager page](chrome://extensions/) present in the [settings page](chrome://settings/)
+4. enable developer mode
+5. click on "Load unpacked"
+6. navigate and choose the root folder
 
 ## **description of files & folders**
 
