@@ -10,6 +10,10 @@ This extension is created using [Rapydscript](https://openbase.com/js/rapydscrip
 4. enable developer mode
 5. click on "Load unpacked"
 6. navigate and choose the root folder
+7. open any webpage, [Google](https://google.com/) for instance. Left-click on the extension and click on the colored button to change the background of the webpage
+8. right-click on the extension to reveal the menu and choose "Options"
+9. choose any one of the preset color buttons to change the color of the button
+10. repeat step 7 and see the change
 
 ## **description of files & folders**
 
@@ -36,6 +40,8 @@ The extension starts with a manifest.json file. It provides various important in
    3.2 **default_icon** - this field contains the paths for the images of various sizes for the toolbar icon.
 
 4. **[icons](https://developer.chrome.com/docs/extensions/mv3/user_interface/#icon_size)** - Extensions also display images on the extension management page, the permissions warning, and favicon. The images are registered in the manifest under icons.
+
+5. **options_page** - register the options.html page in the manifest
 
 ### [background.js](https://github.com/TARP-Fake-News-Identification-Portal/extension-py-js/blob/main/background.js)
 
@@ -74,3 +80,22 @@ external CSS file for the popup. We define the styles of the button which is use
 1. to add color to the button we request the color value from storage. The color is set as the background color of the button. This file is included in the script tag in popup.html.
 
 2. we define a click eventListener for the changeColor button. When the button is clicked we inject setPageBackgroundColor function into the current page. The content of this function will be executed as [programmatically injected content script](https://developer.chrome.com/docs/extensions/mv3/content_scripts/#programmatic) inside the current page. It turns the background color of the page the same color as the button.
+
+### [options.html](https://github.com/TARP-Fake-News-Identification-Portal/extension-py-js/blob/main/user-options/options.html)
+
+> included in [user-options](https://github.com/TARP-Fake-News-Identification-Portal/extension-py-js/tree/main/user-options) folder
+
+---
+
+to enable the "Options" of the extension we need to use this file. Including an options page gives users more control over the extension's functionality, further customizing their browsing experience.
+
+### [options.js](https://github.com/TARP-Fake-News-Identification-Portal/extension-py-js/blob/main/user-options/options.js)
+
+> included in [user-options](https://github.com/TARP-Fake-News-Identification-Portal/extension-py-js/tree/main/user-options) folder
+
+---
+
+this file defines the logic implemented in the "Options" page.
+
+1. the function handleButtonClick reacts to a button click by marking the selected button an saving the selection in the storage.
+2. the function constructOptions helps to create the buttons for each preset color. the page is initialized by calling this function with the presetButtonColors as argument.
