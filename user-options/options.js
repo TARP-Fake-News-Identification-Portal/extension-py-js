@@ -1,6 +1,6 @@
 let page = document.getElementById("buttonDiv");
 let selectedClassName = "current";
-const presentButtonColors = ["#3aa756", "#e8453c", "#f9bb2d", "#4688f1", "#000000"];
+const presetButtonColors = ["#3aa756", "#e8453c", "#f9bb2d", "#4688f1", "#000000"];
 
 function handleButtonClick(event) {
     let current = event.target.parentElement.querySelector(`.${selectedClassName}`);
@@ -28,4 +28,4 @@ function constructOptions(buttonColors) {
     });
 }
 
-constructOptions(presentButtonColors);
+constructOptions(presetButtonColors);
