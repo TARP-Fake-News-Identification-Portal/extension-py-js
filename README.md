@@ -14,9 +14,11 @@ The extension starts with a manifest.json file. It provides various important in
 
    1.1 **service_worker** - lets Chrome know which file to scan for additional instructions, such as events it need to listen for.
 
-2. **permissions** - All the APIs must be registered under this field.
+2. **[permissions](https://developer.chrome.com/docs/extensions/reference/permissions/)** - All the APIs must be registered under this field.
 
-   2.1 **[storage](https://developer.chrome.com/docs/extensions/reference/storage/)** - this API is used to store, retrieve, and track changes to user data
+   2.1 **[storage](https://developer.chrome.com/docs/extensions/reference/storage/)** - this API is used to store, retrieve, and track changes to user data  
+   2.2 **[activeTab](https://developer.chrome.com/docs/extensions/mv3/manifest/activeTab/)** - gives the extension temporary access to the currently active tab when the user invokes the extension.
+   2.3 **[scripting](https://developer.chrome.com/docs/extensions/reference/scripting/)** - execute scripts in various contexts. Here we use this API to use the executeScript() Runtime function to specify a function to be executed instead of a file.
 
 3. **[action](https://developer.chrome.com/docs/extensions/reference/action/)** - This API is used to control the extension's icon in the Chrome Toolbar and the extension manager page.
 
@@ -60,4 +62,6 @@ external CSS file for the popup. We define the styles of the button which is use
 
 ---
 
-to add color to the button we request the color value from storage. The color is set as the background color of the button. This file is included in the script tag in popup.html.
+1. to add color to the button we request the color value from storage. The color is set as the background color of the button. This file is included in the script tag in popup.html.
+
+2. we define a click eventListener for the changeColor button. When the button is clicked we inject setPageBackgroundColor function into the current page. The content of this function will be executed as [programmatically injected content script](https://developer.chrome.com/docs/extensions/mv3/content_scripts/#programmatic) inside the current page. It turns the background color of the page the same color as the button.
