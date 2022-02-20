@@ -4,13 +4,13 @@
     "version": "1.0",
     "manifest_version": 3,
     "background": {
-        "service_worker": "background.js"
+        "service_worker": "/functionality/background.js"
     },
     "permissions": [
         "storage"
     ],
     "action": {
-        "default_popup": "popup.html",
+        "default_popup": "/user-interface/popup.html",
         "default_icon": {
             "16": "/user-interface/images/get_started16.png",
             "32": "/user-interface/images/get_started32.png",
