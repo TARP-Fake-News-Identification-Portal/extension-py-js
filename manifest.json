@@ -1,0 +1,6 @@
+{
+    "name":"Getting Started Example",
+    "description":"building an extension!",
+    "version":"1.0",
+    "manifest_version":3
+}
