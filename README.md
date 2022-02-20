@@ -1,8 +1,16 @@
-# extension-py-js
+# **extension-py-js**
 
 This extension is created using [Rapydscript](https://openbase.com/js/rapydscript) (_subject to change_)
 
-## files & folders
+## **how to use?**
+
+1. clone this repo
+2. open extension manager page on chrome
+3. enable developer mode
+4. click on "Load unpacked"
+5. navigate and choose the root folder
+
+## **description of files & folders**
 
 ### [manifest.json](https://github.com/TARP-Fake-News-Identification-Portal/extension-py-js/blob/main/manifest.json)
 
