@@ -30,7 +30,7 @@ The extension starts with a manifest.json file. It provides various important in
 2. **[permissions](https://developer.chrome.com/docs/extensions/reference/permissions/)** - All the APIs must be registered under this field.
 
    2.1 **[storage](https://developer.chrome.com/docs/extensions/reference/storage/)** - this API is used to store, retrieve, and track changes to user data  
-   2.2 **[activeTab](https://developer.chrome.com/docs/extensions/mv3/manifest/activeTab/)** - gives the extension temporary access to the currently active tab when the user invokes the extension.
+   2.2 **[activeTab](https://developer.chrome.com/docs/extensions/mv3/manifest/activeTab/)** - gives the extension temporary access to the currently active tab when the user invokes the extension.   
    2.3 **[scripting](https://developer.chrome.com/docs/extensions/reference/scripting/)** - execute scripts in various contexts. Here we use this API to use the executeScript() Runtime function to specify a function to be executed instead of a file.
 
 3. **[action](https://developer.chrome.com/docs/extensions/reference/action/)** - This API is used to control the extension's icon in the Chrome Toolbar and the extension manager page.
