@@ -1,7 +1,5 @@
 # **extension-py-js**
 
-#This extension is created using [Rapydscript](https://openbase.com/js/rapydscript) (_subject to change_) and implemented on [Google Chrome](https://www.google.com/chrome/).
-
 ## **how to use?**
 
 1. clone this repo
