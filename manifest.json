@@ -1,15 +1,13 @@
 {
-    "name": "Getting Started Example",
-    "description": "building an extension!",
+    "name": "Twitter Fake News",
+    "description": "detecting fake news on any twitter user",
     "version": "1.0",
     "manifest_version": 3,
-    "background": {
-        "service_worker": "/functionality/background.js"
-    },
     "permissions": [
         "storage",
         "activeTab",
-        "scripting"
+        "scripting",
+        "tabs"
     ],
     "action": {
         "default_popup": "/user-interface/popup.html",
@@ -25,6 +23,5 @@
         "32": "/user-interface/images/twitter/twitter-32.png",
         "48": "/user-interface/images/twitter/twitter-48.png",
         "128": "/user-interface/images/twitter/twitter-128.png"
-    },
-    "options_page": "/user-options/options.html"
+    }
 }

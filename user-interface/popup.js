@@ -1,20 +1,5 @@
-let changeColor = document.getElementById("changeColor");
-
-chrome.storage.sync.get("color", ({ color }) => {
-    changeColor.style.backgroundColor = color;
+chrome.tabs.query({ active: true, currentWindow: true }, ([tab]) => {
+  chrome.storage.sync.set({ key1: tab.url });
 });
 
-changeColor.addEventListener("click", async () => {
-    let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-
-    chrome.scripting.executeScript({
-        target: { tabId: tab.id },
-        function: setPageBackgroundColor
-    });
-});
-
-function setPageBackgroundColor() {
-    chrome.storage.sync.get("color", ({ color }) => {
-        document.body.style.backgroundColor = color;
-    });
-}
+chrome.tabs.create("https://www.google.com");
