@@ -6,31 +6,32 @@ chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
 });
 
 chrome.storage.local.get("key", function (obj) {
-  alert(obj.key);
+  apicall(obj.key);
 });
 
-fetch("http://127.0.0.1:5000/predict", {
-  method: "POST",
-  body: JSON.stringify({
-    title: "foo",
-    body: "bar",
-    userId: 1,
-    data: username,
-  }),
-  headers: {
-    "Content-type": "application/json; charset=UTF-8",
-  },
-})
-  .then((response) => {
-    console.log(response);
+function apicall(username) {
+  fetch("http://127.0.0.1:5000/predict", {
+    method: "POST",
+    body: JSON.stringify({
+      title: "foo",
+      body: "bar",
+      userId: 1,
+      data: username,
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
   })
-  .then((data) => {
-    console.log("Success:", data);
-  })
-  .catch((error) => {
-    console.log("Error:", error);
-  });
-
+    .then((response) => {
+      console.log(response);
+    })
+    .then((data) => {
+      console.log("Success:", data);
+    })
+    .catch((error) => {
+      console.log("Error:", error);
+    });
+}
 // const axios = import("axios");
 
 // const predict = (url) => {
