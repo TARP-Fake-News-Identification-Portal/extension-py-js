@@ -3,5 +3,5 @@ package-lock.json
 package.json
 yarn.lock
 README.md
-user-interface/node_modules/
-node_modules/
+user-interface/node_modules
+node_modules
