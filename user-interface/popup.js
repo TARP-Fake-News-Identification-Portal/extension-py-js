@@ -1,8 +1,6 @@
 chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
   username = tabs[0].url.substr(20);
   chrome.storage.local.set({ key: username });
-  // console.log(username);
-  // chrome.tabs.create({ url: "https://twitter.com/" + username });
 });
 
 chrome.storage.local.get("key", function (obj) {
@@ -20,13 +18,21 @@ function apicall(username) {
       "Content-type": "application/json; charset=UTF-8",
     },
   })
-    .then((response) => {
-      alert(response);
-    })
+    .then((response) => response.json())
     .then((data) => {
-      console.log("Success:", data);
+      var un = document.getElementById("username");
+      un.appendChild(document.createTextNode(username));
+      var printTable = document.getElementById("printTable");
+      for (var tweet_auth of data.prediction) {
+        var row = document.createElement("tr");
+        for (var i = 0; i <= 1; i++) {
+          var column = document.createElement("td");
+          var columnText = document.createTextNode(tweet_auth[i]);
+          column.appendChild(columnText);
+          row.appendChild(column);
+        }
+        printTable.appendChild(row);
+      }
     })
-    .catch((error) => {
-      console.log("Error:", error);
-    });
+    .catch(console.error);
 }

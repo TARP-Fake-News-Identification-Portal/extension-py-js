@@ -4,11 +4,38 @@
 <head>
     <title>Text to Foot</title>
     <script src="/user-interface/popup.js"></script>
+    <style>
+        h1,
+        p {
+            text-align: center;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        body {
+            color: #710000;
+            background-color: #B8DAD2;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Fetch twitter username</h1>
-    <button id="report">Generate Report!</button>
+    <h1>Report</h1>
+    <p>Given User: <font color="#FF4B51" id="username"></font>
+    </p>
+    <table id="printTable">
+        <th>Tweet</th>
+        <th>Authenticity</th>
+    </table>
 </body>
 
 </html>
